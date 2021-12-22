@@ -11,7 +11,7 @@ RUN echo '<somepass>:<somepass>' | chpasswd
 
 COPY Container-dnsmasq.conf /etc/
 COPY openfortivpn.config /etc/openfortivpn/config
-COPY sudo-<username> /etc/sudoers.d/
+COPY sudo-rules /etc/sudoers.d/
 
 EXPOSE 2222
 
