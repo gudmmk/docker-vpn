@@ -9,7 +9,7 @@ RUN usermod -aG sudo <username>
 RUN service ssh start
 RUN echo '<somepass>:<somepass>' | chpasswd
 
-COPY dnsmasq.conf /etc/
+COPY Container-dnsmasq.conf /etc/
 COPY openfortivpn.config /etc/openfortivpn/config
 COPY sudo-<username> /etc/sudoers.d/
 
