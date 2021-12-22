@@ -1,0 +1,19 @@
+# VPN Hub
+host vpn-hub
+  Hostname <vm ip>
+  User <username>
+  ForwardAgent yes
+
+# Container
+Host vpn-container
+  Hostname <container ip>
+  Port 2222
+  User <username>
+  IdentityFile ~/.ssh/<key file>
+  ForwardAgent yes
+
+Host *.domain.tld
+  User <username>
+  ForwardAgent yes
+  IdentityFile ~/.ssh/<key file>
+  ProxyJump vpn-container
